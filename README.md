@@ -56,6 +56,6 @@ The PWM Drawer with Real-Time Display project aims to provide a valuable tool fo
 # About IEEE
 ### The Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities.
 
-For more information about IEEE, visit  [IEEE Official Website](https://www.ieee.org/)https://www.ieee.org/.
+For more information about IEEE, visit  [IEEE Official Website](https://www.ieee.org/).
 
 
