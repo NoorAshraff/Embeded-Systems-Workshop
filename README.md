@@ -51,11 +51,11 @@
 ##### 7) Documentation and Presentation: Document the project thoroughly, including hardware connections, code explanations, and user instructions. Prepare a presentation to demonstrate the project's functionality.
 
 ## Conclusion:
-##### The PWM Drawer with Real-Time Display project aims to provide a valuable tool for measuring and visualizing PWM waveforms. By using ##### hardware input capture and graphical LCD interface, the system will offer accurate and real-time representation of PWM signals. The ##### user-friendly interface and optional data logging make it suitable for various applications, including debugging PWM-controlled ##### systems, testing motor control, and analyzing power circuits.
+##### The PWM Drawer with Real-Time Display project aims to provide a valuable tool for measuring and visualizing PWM waveforms. By using hardware input capture and graphical LCD interface, the system will offer accurate and real-time representation of PWM signals. The ##### user-friendly interface and optional data logging make it suitable for various applications, including debugging PWM-controlled ##### systems, testing motor control, and analyzing power circuits.
 
 
-# About IEEE
-### The Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to ### advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow ### through its highly-cited publications, conferences, technology standards, and professional and educational activities.
+## About IEEE
+### The Institute of Electrical and Electronics Engineers (IEEE) is the world's largest technical professional organization dedicated to  advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow ### through its highly-cited publications, conferences, technology standards, and professional and educational activities.
 
 For more information about IEEE, visit  [IEEE Official Website](https://www.ieee.org/).
 
