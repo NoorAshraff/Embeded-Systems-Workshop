@@ -2,5 +2,5 @@
 
 
 ## **prerequisites:**
-###*Prior experience with C programming language.
-###*Basic knowledge of number systems and logic design.
+### *Prior experience with C programming language.
+### *Basic knowledge of number systems and logic design.
