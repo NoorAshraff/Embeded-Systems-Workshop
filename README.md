@@ -1,5 +1,6 @@
-# embeded systems--stm32f103c8--my fisrt driver
+
 # embeded systems workshop - IEEE ASUSB 
+## MC: stm32f103c8
 ### duration : 7 weeks
 ## **prerequisites:**
 ##### * Prior experience with C programming language.
