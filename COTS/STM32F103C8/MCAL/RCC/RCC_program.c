@@ -57,7 +57,7 @@ Std_ReturnType Local_FunctionStatus = E_NOT_OK;
         
 
     #elif RCC_PLL_STATE  == RCC_PLL_HSI
-     SET_BIT(RCC_CFGR,RCC_CFGR_PLLSRC);
+     CLR_BIT(RCC_CFGR,RCC_CFGR_PLLSRC);
 
 
     #else 
