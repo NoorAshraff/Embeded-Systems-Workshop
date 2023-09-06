@@ -1,7 +1,7 @@
 
 # embeded systems workshop - IEEE ASUSB 
 ## MC: stm32f103c8
-### duration : 7 weeks
+### duration : 5 weeks
 ## **prerequisites:**
 ##### * Prior experience with C programming language.
 ##### * Basic knowledge of number systems and logic design.
