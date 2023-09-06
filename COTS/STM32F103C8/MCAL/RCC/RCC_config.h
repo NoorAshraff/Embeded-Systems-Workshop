@@ -41,8 +41,14 @@
  * .RCC_PLL_CRYSTAL
  */
       # define RCC_PLL_BYPASS        RCC_PLL_RC
+
    #endif
 
+/*
+*@brief selct the required multiplication factor
+*@note select from 0 to 16 in binary
+*/
+# define RCC_PLL_MUL  0101
 
 #endif
 

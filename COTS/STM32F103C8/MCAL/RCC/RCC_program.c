@@ -16,8 +16,7 @@
 #include "RCC_private.h"
 
 
-#ifndef RCC_PROGRAM_C_
-#define RCC_PROGRAM_C_
+
 
 
 
@@ -54,37 +53,32 @@ Std_ReturnType Local_FunctionStatus = E_NOT_OK;
        #else 
        #error "wrong choice!!"
        #endif
-        SET_BIT(RCC_CR,RCC_CR_HSEON );
-        SET_BIT(RCC_CR,RCC_CR_PLLON );
-
-     while(!GET_BIT(RCC_CR,RCC_CR_HSERDY));
-     RCC_CFGR = 0x00000002;
-     Local_FunctionStatus = E_OK;
+        SET_BIT(RCC_CFGR,RCC_CFGR_PLLSRC);
+        
 
     #elif RCC_PLL_STATE  == RCC_PLL_HSI
-    SET_BIT(RCC_CR,RCC_CR_HSION);
-    SET_BIT(RCC_CR,RCC_CR_PLLON );
+     SET_BIT(RCC_CFGR,RCC_CFGR_PLLSRC);
 
-   while(!GET_BIT(RCC_CR,RCC_CR_HSIRDY));
-    RCC_CFGR = 0x00000002;
-    Local_FunctionStatus = E_OK;
 
     #else 
     # error "wrong choice!!"
      #endif
 
+RCC_CFGR &= ~(ob1111<< RCC_PLLMUL);
+RCC_CFGR |=(ob(RCC_PLL_MUL-0010)<<RCC_PLLMUL)
 
 
-
+SET_BIT(RCC_CR,RCC_CR_PLLON);
+while(!(GET_BIT(RCC_CR,RCC_CR_PLLRDY)));
+RCC_CFGR = 0x00000002;
+Local_FunctionStatus = E_OK;
 
 
 #else
   #error "wrong choice!!"
 
-
 #endif
 return Local_FunctionStatus;
-
 
 
 
@@ -172,4 +166,3 @@ return Local_FunctionStatus;
 
 
 
-#endif

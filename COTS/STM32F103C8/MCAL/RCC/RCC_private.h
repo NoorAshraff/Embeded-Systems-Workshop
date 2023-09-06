@@ -30,6 +30,11 @@
 #define RCC_CR_HSION        0
 #define RCC_CR_HSIRDY       1
 #define RCC_CR_PLLON        24
+#define RCC_CR_PLLRDY       25
+#define RCC_CFGR_PLLSRC     16
+#define RCC_CFGR_PLLMUL     18
+
+
 
 
 
