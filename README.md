@@ -14,6 +14,7 @@
 ##### 3) ARM Architecture Basics	
 ##### 4) RCC Peripheral	
 ##### 5) GPIO Peripheral
+##### 6)NVIC core peripheral
 
 # Project Proposal: PWM Drawer with Real-Time Display on Graphical LCD
 ## Project Overview:
