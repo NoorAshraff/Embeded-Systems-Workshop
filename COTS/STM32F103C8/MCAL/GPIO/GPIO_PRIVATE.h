@@ -5,7 +5,7 @@
 /************ file name : GPIO_PRIVATE.h    *******/
 /*************************************************/
 
-# ifndef GPIO-PRIVATE_H
+# ifndef GPIO_PRIVATE_H
 # define GPIO_PRIVATE_H
 
 # define GPIO_PORTA_BASEADRESS  0x4001 0800U

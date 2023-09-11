@@ -5,7 +5,7 @@
 /************ file name : GPIO_CONFIG.h    *******/
 /*************************************************/
 
-# ifndef GPIO-INTERFACE_H
+# ifndef GPIO_INTERFACE_H
 # define GPIO_INTERFACE_H
 
 
