@@ -6,7 +6,7 @@
 /*************************************************/
 
 # ifndef EXTI_INTERFACE_H
-# define GPIO_INTERFACE_H
+# define EXTI_INTERFACE_H
 
 #define EXTI_RISING_EDGE  0   
 #define EXTI_FALLING_EDGE 1   
