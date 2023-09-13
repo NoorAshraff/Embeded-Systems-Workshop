@@ -17,6 +17,10 @@ In this workshop, sessions were conducted offline at the Faculty of Engineering,
 4. RCC Peripheral
 5. GPIO Peripheral
 6. NVIC Core Peripheral
+7. EXTI peripheral
+8. AFIO peripheral
+
+   
 
 ## Project Proposal: PWM Drawer with Real-Time Display on Graphical LCD
 
