@@ -2,7 +2,7 @@
 /************ Author : Noor Ashraf         *******/
 /************ Date : 29 August 2023        *******/
 /************ version : 0.1                *******/
-/************ file name : EXTI_CONFIG.h    *******/
+/************ file name : EXTI_INTERFACE.h    *******/
 /*************************************************/
 
 # ifndef EXTI_INTERFACE_H
@@ -36,11 +36,11 @@
 
 void EXTI_Init(void);
 
-Std_ReturnType EXTI_EnableLine(u8 Copy_Line);
+Std_ReturnType MCAL_EXTI_EnableLine(u8 Copy_Line);
 
-Std_ReturnType EXTI_DisableLine(u8 Copy_Line);
+Std_ReturnType MCAL_EXTI_DisableLine(u8 Copy_Line);
 
-Std_ReturnType EXTI_SetTrigger(u8 Copy_Line, u8 Copy_Mode);
+Std_ReturnType MCAL_EXTI_SetTrigger(u8 Copy_Line, u8 Copy_Mode);
 
 
 

@@ -5,8 +5,8 @@
 /************ file name : EXTI_CONFIG.h    *******/
 /*************************************************/
 
-# ifndef EXTI_INTERFACE_H
-# define EXTI_INTERFACE_H
+# ifndef EXTI_CONFIG_H
+# define EXTI_CONFIG_H
 
 /**
  * @brief EXTI Configuration Array

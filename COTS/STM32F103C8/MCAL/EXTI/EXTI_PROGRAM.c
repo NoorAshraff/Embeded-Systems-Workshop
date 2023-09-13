@@ -12,13 +12,13 @@
 
 /********************** < MCAL********************/
 
-#include "EXTI_interface.h"
-#include "EXTI_config.h"
-#include "EXTI_private.h"
+#include "EXTI_INTERFACE.h"
+#include "EXTI_CONFIG.h"
+#include "EXTI_PRIVATE.h"
 
 /***************< function implementation***********/
 
-void EXTI_Init(void)
+void MCAL_EXTI_Init(void)
 {
     for (u8 Line = 0; Line < EXTI_LINES_COUNT; Line++)
     {
@@ -51,7 +51,7 @@ void EXTI_Init(void)
     }
 }
 
-Std_ReturnType EXTI_EnableLine(u8 Copy_Line)
+Std_ReturnType MCAL_EXTI_EnableLine(u8 Copy_Line)
 {
     Std_ReturnType Local_FunctionStatus = E_NOT_OK;
 
@@ -69,7 +69,7 @@ Std_ReturnType EXTI_EnableLine(u8 Copy_Line)
 
 }
 
-Std_ReturnType EXTI_DisableLine(u8 Copy_Line)
+Std_ReturnType MCAL_EXTI_DisableLine(u8 Copy_Line)
 {
     Std_ReturnType Local_FunctionStatus = E_NOT_OK;
 
@@ -86,7 +86,7 @@ Std_ReturnType EXTI_DisableLine(u8 Copy_Line)
     return Local_FunctionStatus;
 }
 
-Std_ReturnType EXTI_SetTrigger(u8 Copy_Line, u8 Copy_Mode)
+Std_ReturnType MCAL_EXTI_SetTrigger(u8 Copy_Line, u8 Copy_Mode)
 {
     Std_ReturnType Local_FunctionStatus = E_NOT_OK;
 
