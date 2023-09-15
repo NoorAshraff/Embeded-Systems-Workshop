@@ -12,11 +12,14 @@
 
 /********************** < MCAL********************/
 
+#include "GPIO_INTERFACE.h"
+#include "AFIO_INTERFACE.h"
 #include "EXTI_INTERFACE.h"
 #include "EXTI_CONFIG.h"
 #include "EXTI_PRIVATE.h"
 
 /***************< function implementation***********/
+
 
 void MCAL_EXTI_Init(void)
 {
@@ -50,6 +53,27 @@ void MCAL_EXTI_Init(void)
         }
     }
 }
+
+Std_ReturnType MCAL_EXTI_InitForAFIO(u8 Copy_Line,u8 Copy_Port)
+{
+
+Std_ReturnType Local_FunctionStatus =E_NOT_OK;
+
+if(Copy_Line>EXTI_LINES_COUNT || Copy_Port >GPIO_PORTC)
+  return Local_FunctionStatus;
+Std_ReturnType LOCAL_Status=MCAL_AFIO_SetEXTIConfiguration(Copy_Line, Copy_Port);
+
+if(LOCAL_Status)
+Local_FunctionStatus=E_OK;
+else Local_FunctionStatus= E_NOT_OK;
+
+
+return Local_FunctionStatus;
+}
+
+
+
+
 
 Std_ReturnType MCAL_EXTI_EnableLine(u8 Copy_Line)
 {

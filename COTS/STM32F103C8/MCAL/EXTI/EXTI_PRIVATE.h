@@ -36,10 +36,11 @@ volatile u32 PR;
 #define EXTI_LINE_ENABLED       1
 #define EXTI_LINE_DISABLED      0
 
-typedef struct {
+typedef struct { 
+u8 GPIO_PORTMAP :3;
 u8 LineEnabled  :1;
 u8 TriggerType  :2;
-u8 :5;
+u8 :2;
 
 }EXTI_CONFIGURATION;
 

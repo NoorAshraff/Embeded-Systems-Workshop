@@ -35,6 +35,7 @@
 
 
 void EXTI_Init(void);
+Std_ReturnType MCAL_EXTI_InitForAFIO(u8 Copy_Line,u8 Copy_Port);
 
 Std_ReturnType MCAL_EXTI_EnableLine(u8 Copy_Line);
 
