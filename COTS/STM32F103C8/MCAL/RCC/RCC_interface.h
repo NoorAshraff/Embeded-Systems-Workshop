@@ -1,20 +1,39 @@
-/********************************************/
-/*******Author : Noor Ashraf       **********/
-/*******date : 26 august 2023      **********/
-/*******version : 0.1              **********/
-/******file name : RCC_interface.h **********/
-/********************************************/
-
-
+/****************************************************************/
+/******* Author    : noor ashraf ahmed          *****************/
+/******* Date      : 26 Aug 2023                *****************/
+/******* Version   : 0.1                        *****************/
+/******* File Name : RCC_interface.h            *****************/
+/****************************************************************/
 #ifndef RCC_INTERFACE_H_
 #define RCC_INTERFACE_H_
+#include "STD_TYPES.h"
 
+/**
+ * @defgroup RCC_Peripheral_Macros RCC Peripheral Macros
+ * @brief Macros related to clock configuration for different peripherals.
+ * @{
+ */
 
-# define RCC_AHB  0
-# define RCC_APB1 1 
-# define RCC_APB2 2
+/**
+ * @defgroup RCC_Clock_Domains Clock Domains
+ * @brief Macros defining the available clock domains for peripheral clock configuration.
+ * @{
+ */
 
+/**
+ * @brief Available clock domains for peripheral clock configuration.
+ */
+#define RCC_AHB                 0 /**< Advanced High-performance Bus (AHB) domain. */
+#define RCC_APB1                1 /**< Advanced Peripheral Bus 1 (APB1) domain. */
+#define RCC_APB2                2 /**< Advanced Peripheral Bus 2 (APB2) domain. */
 
+/** @} */
+
+/**
+ * @defgroup RCC_AHBENR_Bit_Def RCC_AHBENR Bit Definitions
+ * @brief Macros representing the bit positions in the AHB Peripheral Clock Enable Register (RCC_AHBENR).
+ * @{
+ */
 
 #define RCC_AHBENR_DMA1EN       0  /**< DMA1 clock enable */
 #define RCC_AHBENR_DMA2EN       1  /**< DMA2 clock enable */
@@ -87,19 +106,60 @@
 #define RCC_APB2ENR_TIM10EN     20 /**< Timer 10 clock enable */
 #define RCC_APB2ENR_TIM11EN     21 /**< Timer 11 clock enable */
 
+/** @} */
+
+/** @} */  /* End of RCC_Peripheral_Macros group */
+
+
+/**
+ * @defgroup RCC_API RCC APIs
+ * @brief Functions for RCC (Reset and Clock Control) configuration.
+ * @{
+ */
+
+/**
+ * @brief Initialize the system clock configuration.
+ *
+ * This function initializes the system clock configuration according to the desired settings.
+ * It should be called early in the program to properly configure the clock system.
+ *
+ * @return Std_ReturnType
+ * @retval E_OK     Clock initialization successful.
+ * @retval E_NOT_OK Clock initialization failed.
+ */
+Std_ReturnType MCAL_RCC_InitSysClock(void);
+
+/**
+ * @brief Enable a specific peripheral on a specific bus.
+ *
+ * This function enables a specific peripheral on a specific bus.
+ *
+ * @param[in] Copy_PeripheralId The ID of the peripheral to be enabled.
+ * @param[in] Copy_BusId        The ID of the bus to which the peripheral belongs (RCC_AHB, RCC_APB1, or RCC_APB2).
+ * @return Std_ReturnType
+ * @retval E_OK     Peripheral enabling successful.
+ * @retval E_NOT_OK Peripheral enabling failed.
+ */
+Std_ReturnType MCAL_RCC_EnablePeripheral(u8 Copy_BusId, u8 Copy_PeripheralId);
+
+/**
+ * @brief Disable a specific peripheral.
+ *
+ * This function disables a previously enabled peripheral.
+ * 
+ * @param[in] Copy_PeripheralId The ID of the peripheral to be enabled.
+ * @param[in] Copy_BusId        The ID of the bus to which the peripheral belongs (RCC_AHB, RCC_APB1, or RCC_APB2).
+ * @return Std_ReturnType
+ * @retval E_OK     Peripheral disabling successful.
+ * @retval E_NOT_OK Peripheral disabling failed.
+ */
+Std_ReturnType MCAL_RCC_DisablePeripheral(u8 Copy_BusId, u8 Copy_PeripheralId);
+
+/**
+ * @}
+ */
 
 
 
-Std_ReturnType Mcal_Rcc_InitSysClock(void);
 
-
-Std_ReturnType Mcal_Rcc_EnablePeripheral(u8 Copy_PeripheralId, u8 Copy_BusId);
-
-
-Std_ReturnType Mcal_Rcc_DisablePeripheral(u8 Copy_PeripheralId, u8 Copy_BusId);
-
-
-
-
-
-#endif
+#endif /**< RCC_INTERFACE_H_ */

@@ -18,7 +18,7 @@
  *
  * @return None.
  */
-void HAL_LED_Init(u8 LedId);
+Std_ReturnType HAL_LED_Init(LED_TYPE Copy_LEDPortId , LED LED_TYPE Copy_LEDPinId);
 
 /**
  * @brief Turns on the specified LED.
@@ -29,7 +29,7 @@ void HAL_LED_Init(u8 LedId);
  *
  * @return None.
  */
-void HAL_LED_On(u8 LedId);
+Std_ReturnType HAL_LED_On(LED_TYPE Copy_LEDPortId ,  LED_TYPE Copy_LEDPinId);
 
 /**
  * @brief Turns off the specified LED.
@@ -40,7 +40,7 @@ void HAL_LED_On(u8 LedId);
  *
  * @return None.
  */
-void HAL_LED_Off(u8 LedId);
+Std_ReturnType HAL_LED_Off(LED_TYPE Copy_LEDPortId , LED_TYPE Copy_LEDPinId);
 
 /**
  * @brief Toggles the specified LED.
@@ -51,7 +51,7 @@ void HAL_LED_Off(u8 LedId);
  *
  * @return None.
  */
-void HAL_LED_Tog(u8 LedId);
+Std_ReturnType HAL_LED_Tog(LED_TYPE Copy_LEDPortId ,  LED_TYPE Copy_LEDPinId);
 
 /**
  * @brief Blinks the specified LED once.
@@ -62,7 +62,7 @@ void HAL_LED_Tog(u8 LedId);
  *
  * @return None.
  */
-void HAL_LED_BlinkOnce(u8 LedId);
+Std_ReturnType HAL_LED_BlinkOnce(LED_TYPE Copy_LEDPortId ,  LED_TYPE Copy_LEDPinId,LED_DELAY_ms_TYPE Copy_BlinkTime);
 
 /**
  * @brief Blinks the specified LED twice.
@@ -73,7 +73,7 @@ void HAL_LED_BlinkOnce(u8 LedId);
  *
  * @return None.
  */
-void HAL_LED_BlinkTwice(u8 LedId);
+Std_ReturnType HAL_LED_BlinkTwice(LED_TYPE Copy_LEDPortId ,  LED_TYPE Copy_LEDPinId, LED_DELAY_ms_TYPE Copy_BlinkTime);
 
 
 
