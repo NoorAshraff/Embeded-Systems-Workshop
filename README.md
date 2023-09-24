@@ -1,7 +1,7 @@
 # Embedded Systems Workshop - IEEE ASUSB
 
 *Microcontroller (MC):* STM32F103C8  
-*Duration:* 5 weeks
+*Duration:* 6 weeks
 
 ## Prerequisites
 - Prior experience with the C programming language.
@@ -19,6 +19,12 @@ In this workshop, sessions were conducted offline at the Faculty of Engineering,
 6. NVIC Core Peripheral
 7. EXTI peripheral
 8. AFIO peripheral
+9. SysTick Timer core peripheral
+10. SCB
+11. LED (Hardware Abstraction Layer)
+12. intro to RTOS
+13. Coommunication Protocol characteristics
+14. Hardware Interface of UART
 
    
 
