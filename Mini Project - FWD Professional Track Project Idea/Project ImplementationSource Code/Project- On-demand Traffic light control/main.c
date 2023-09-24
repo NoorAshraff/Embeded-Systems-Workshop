@@ -85,6 +85,13 @@ while(1)
 
 void EXTI0_IRQHandler(void)
 { 
+	int i;
+	for( i=2000; i>0;i--);
+	u8 BUTTON_STATUS;
+	MCAL_GPIO_GetPinValue(EXTI_PORTMAP_GPIOB, GPIO_PIN0,& BUTTON_STATUS);
+	if (!BUTTON_STATUS)
+	{
+	
 
 u8 PIN_CAR_STATUS_green;
 u8 PIN_PEDESTRIAN_STATUS_red;
@@ -153,6 +160,11 @@ MCAL_NVIC_ClearPendingIRQ(NVIC_EXTI0_IRQn);
  EXTI_Exit_IRQHandler(EXTI_LINE0);
 
  MCAL_NVIC_ClearPendingIRQ(NVIC_EXTI0_IRQn);
+}
+	else	
+ EXTI_Exit_IRQHandler(EXTI_LINE0);
 
+ MCAL_NVIC_ClearPendingIRQ(NVIC_EXTI0_IRQn);
+	
 }
 
