@@ -129,12 +129,52 @@ Std_ReturnType MCAL_STK_SetBusyWait(u32 Copy_Microseconds)
 
         Local_FunctionStatus = E_OK;
     }
+       else if(TicksRequired> 0X00FFFFFF)
+    {   
+     
+      while(TicksRequired> 0X00FFFFFF) 
+      {
+      STK->LOAD =0X00FFFFFF ;
+
+      STK->CTRL |= STK_CTRL_ENABLE_MASK;
+
+        
+      while (!(STK->CTRL & STK_CTRL_COUNTFLAG_MASK));
+
+      TicksRequired -=0X00FFFFFF;
+     
+   
+      }
+      if (TicksRequired ==0)
+      Local_FunctionStatus=E_OK;
+
+      else 
+       {
+        STK->LOAD = TicksRequired;
+
+        STK->CTRL |= STK_CTRL_ENABLE_MASK;
+
+        while (!(STK->CTRL & STK_CTRL_COUNTFLAG_MASK));
+
+        STK->CTRL &= ~STK_CTRL_ENABLE_MASK;
+
+        STK->VAL = 0;
+       }
+        Local_FunctionStatus = E_OK;
+
+
+    }
+
 
     return Local_FunctionStatus;
 }
+
+
+    
   
 Std_ReturnType MCAL_STK_SetDelay_ms(f32 Copy_Milliseconds)
 {
+    Std_ReturnType Local_FunctionStatus = E_NOT_OK;
     /**< Calculate the number of ticks required to wait for the specified number of milliseconds */
     u32 Local_u32Ticks = (u32)((Copy_Milliseconds * STK_AHB_CLK) / 1000.0);
 
@@ -159,10 +199,42 @@ Std_ReturnType MCAL_STK_SetDelay_ms(f32 Copy_Milliseconds)
         /**< Return success status */
         return E_OK;
     }
-    else
-    { 
-        /**< Return error status */
-        return E_NOT_OK;
+     else if(Local_u32Ticks> 0X00FFFFFF)
+    {   
+     
+      while(Local_u32Ticks> 0X00FFFFFF) 
+      {
+      STK->LOAD =0X00FFFFFF ;
+
+      STK->CTRL |= STK_CTRL_ENABLE_MASK;
+
+        
+      while (!(STK->CTRL & STK_CTRL_COUNTFLAG_MASK));
+
+      Local_u32Ticks -=0X00FFFFFF;
+     
+   
+      }
+      if (Local_u32Ticks ==0)
+      Local_FunctionStatus=E_OK;
+
+      else 
+       {
+        STK->LOAD = Local_u32Ticks;
+
+        STK->CTRL |= STK_CTRL_ENABLE_MASK;
+
+        while (!(STK->CTRL & STK_CTRL_COUNTFLAG_MASK));
+
+        STK->CTRL &= ~STK_CTRL_ENABLE_MASK;
+
+        STK->VAL = 0;
+       }
+        Local_FunctionStatus = E_OK;
+
+
     }
+
+return Local_FunctionStatus;
 }
 
