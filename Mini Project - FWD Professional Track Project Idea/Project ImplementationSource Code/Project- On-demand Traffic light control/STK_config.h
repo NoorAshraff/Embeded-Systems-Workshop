@@ -39,7 +39,7 @@
  *
  * @retval None
  */
-#define STK_CTRL_TICKINT       STK_CTRL_TICKINT_ENABLE
+#define STK_CTRL_TICKINT       STK_CTRL_TICKINT_DISABLE
 
 
 #endif /**< STK_CONFIG_H_ */
