@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+".\afio_program.o"
+".\exti_program.o"
+".\gpio_program.o"
+".\rcc_program.o"
+".\stk_program.o"
+".\main.o"
+".\nvic_program.o"
+".\scb_program.o"
+".\startup_stm32f10x_md.o"
+".\system_stm32f10x.o"
+--ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\second.map" -o .\second.axf
